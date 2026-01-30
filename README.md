@@ -19,7 +19,7 @@
 - [nano_vllm解读与MiniCPM适配](https://github.com/LDLINGLINGLING/nano_vllm_note.git)
 
 
-以上项目都是个人原创，如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
+以上项目都是个人原创（或者二创），如果需要可自取，但是注意保护我的个人知识产权，用了给个星星。
 
 ## OCR_VG
 
