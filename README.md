@@ -420,7 +420,9 @@ nano-vllm/
 1. 如何全自动构造高质量（创新点）：为了构造多样化的{query,plan,trajectory},需要先解析工具间的联系，构造工具依赖图谱，然后从工具图谱中游走获得拓扑工具链，比如
 "chain": ["weapon_launch"->"weapon_status_check"->"weapon_status_check"->"python_math"],.
 获得以上工具链后，使用大模型将其实例化为plan和Query对，例如:
+ 
  "question": "Launch the Sniper Rifle against an Enemy Tank located at coordinates [600, 800]. Check the Sniper Rifle's ammunition status and operational condition. Calculate the straight-line distance to the target location.",
+
 "plan": "1. Use weapon_launch to activate the Sniper Rifle against the Enemy Tank at [600,800], obtaining engagement confirmation A.\n2. Execute weapon_status_check on 'Sniper Rifle' with check_type 'ammunition', yielding remaining rounds B.\n3. Execute weapon_status_check on 'Sniper Rifle' with check_type 'operational', returning operational status C.\n4. Utilize python_math with the expression 'sqrt(600**2 + 800**2)' to calculate the distance to the target, resulting in distance D=1000 meters."
 然后根据plan生成trajectory(省略不展示)：
 2. 更具上述生成的数据，可以考虑进行强化学习，主要考虑了reward的设计。
